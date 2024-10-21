@@ -1,1 +1,4 @@
 *.xcworkspace
+*.xcodeproj
+*Tests/
+*UITests/
