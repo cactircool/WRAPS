@@ -2,3 +2,5 @@
 *.xcodeproj
 *Tests/
 *UITests/
+.env
+server/.env

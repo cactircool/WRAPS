@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: calc(100vw - 20px);
+            height: calc(100vh - 20px);
+            margin: 0;
+            padding: 10px;
+            background-color: black;
+
+            font-family: Helvetica, sans-serif;
+            font-size: 18px;
+            color: white;
+        }
+
+        form {
+            background-color: transparent;
+            padding: 20px;
+            border-radius: 30px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            border: 1px solid white;
+        }
+
+        form input {
+            font-family: Helvetica, sans-serif;
+            font-size: 18px;
+
+            background-color: transparent;
+            border-radius: 30px;
+            outline: transparent;
+            padding: 15px;
+            border: 1px solid white;
+            flex: 1;
+            color: white;
+        }
+
+        div.wrapper {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        div.form-wrapper {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: flex-start;
+            flex: 1;
+            height: 100%;
+        }
+
+        #submit-button {
+            padding: 20px;
+            font-size: 24px;
+            transition: all ease 350ms;
+            margin-top: 10px;
+        }
+
+        #submit-button:hover {
+            background-color: lightgreen;
+        }
+
+        div.header-wrapper {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            width: 100%;
+            flex: .75;
+        }
+
+        h1 {
+            font-size: 48px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-wrapper">
+        <h1>WRAPS Enrollment</h1>
+    </div>
+
+    <div class="form-wrapper">
+        <form action="/enroll?profile-ids={{ .ProfileIDs }}" method="post">
+            <div class="wrapper">
+                <label for="username">Username:</label>
+                <input type="text" name="username" placeholder="Enter username here">
+            </div>
+
+            <div class="wrapper">
+                <label for="username">Password:</label>
+                <input type="password" name="password" placeholder="Enter password here">
+            </div>
+
+            <input type="submit" id="submit-button" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
