@@ -4,3 +4,7 @@
 *UITests/
 .env
 server/.env
+server/certs/*.crt
+server/certs/*.csr
+server/certs/*.pem
+server/certs/*.key
